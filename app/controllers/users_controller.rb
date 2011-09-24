@@ -82,10 +82,10 @@ class UsersController < ApplicationController
   end
 
   def register
-
+      @user = User.new
   end
 
   def login
-
+    @user = User.new
   end
 end

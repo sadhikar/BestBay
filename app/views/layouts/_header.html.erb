@@ -8,4 +8,9 @@
       <li><%= link_to "Register", register_path %></li>
     </ul>
   </nav>
+  <%= form_tag("/search", :method => "get") do %>
+      <%= label_tag(:q, "Search for: ") %>
+      <%= text_field_tag(:q) %>
+      <%= submit_tag("Search") %>
+  <% end %>
 </header>

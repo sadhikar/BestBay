@@ -2,8 +2,8 @@ BestBay::Application.routes.draw do
   resources :users
 
   match '/home', :to => 'users#index'
-  match '/register', :to => 'user#register'
-  match '/login', :to => 'user#login'
+  match '/register', :to => 'users#register'
+  match '/login', :to => 'users#login'
 
 
   root :to => 'users#index'
