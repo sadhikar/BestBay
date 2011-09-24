@@ -1,4 +1,12 @@
 BestBay::Application.routes.draw do
+  resources :users
+
+  match '/home', :to => 'users#index'
+  match '/register', :to => 'user#register'
+  match '/login', :to => 'user#login'
+
+
+  root :to => 'users#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
