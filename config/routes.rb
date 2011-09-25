@@ -1,9 +1,17 @@
 BestBay::Application.routes.draw do
+  get "sessions/new"
+
   resources :users
 
   match '/home', :to => 'users#index'
   match '/register', :to => 'users#register'
+
+  match '/session', :to => 'sessions#new'
   match '/login', :to => 'users#login'
+  match '/myaccounts', :to => 'users#myaccounts'
+  match '/seller_reg', :to => 'users#seller_reg'
+  match '/search', :to => 'users#search'
+  match '/itempage', :to => 'users#itempage'
 
 
   root :to => 'users#index'

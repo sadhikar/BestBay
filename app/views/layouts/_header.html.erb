@@ -1,6 +1,7 @@
 <header>
-  <% logo = image_tag("logo1.jpg", :alt => "Best Bay", :class => "round") %>
+  <% logo = image_tag("logo2.jpg", :alt => "Best Bay", :class => "round") %>
   <%= link_to logo, root_path %>
+  <!--<%= render "layouts/search" %>-->
   <nav class="round">
     <ul>
       <li><%= link_to "Home", home_path %></li>
@@ -8,9 +9,5 @@
       <li><%= link_to "Register", register_path %></li>
     </ul>
   </nav>
-  <%= form_tag("/search", :method => "get") do %>
-      <%= label_tag(:q, "Search for: ") %>
-      <%= text_field_tag(:q) %>
-      <%= submit_tag("Search") %>
-  <% end %>
+      <%= render "layouts/search" %>
 </header>

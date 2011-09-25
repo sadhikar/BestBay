@@ -1,5 +1,5 @@
 <h1>Registration</h1>
-<%= form_for(@user) do |f| %>
+<%= form_for('/register') do |f| %>
     <% if @user.errors.any? %>
         <div id="error_explanation">
           <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
@@ -24,7 +24,8 @@
       <%= f.password_field :password %>
     </div>
    <div>
-     <p>Click here if you would like to sell something at the Best-Bay</p><input id="accept" name="accept" type="checkbox" value="0" />
+     <%= check_box_tag(:accept)%>
+     <%= label_tag(:accept, "Click here if you would like to sell something at the Best-Bay") %>
    </div>
     <div class="actions">
       <%= f.submit "Register" %>
