@@ -3,7 +3,8 @@
 }
 
 body {
-  background: url("../../images/paper003.jpg")
+  background: url("http://t1.gstatic.com/images?q=tbn:ANd9GcTbpWFYPUMcXGJ4Xow_OyuQnmNHWMOg89D0efixdUc5Kax3eJH5xGDgc3R9");
+  background-repeat: repeat;
 }
 
 header {
