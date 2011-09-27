@@ -98,15 +98,23 @@ class UsersController < ApplicationController
   end
 
   def seller_reg
-
+    @event = params[:commit]
+    if (@event == "Submit")
+      redirect_to myaccounts_path
+    end
   end
 
   def search
 
   end
-  def itempage
 
+  def itempage
+    @event = params[:commit]
+    if (@event == "Bid")
+      redirect_to bidding_path
+    end
   end
+
   def login
     @user = User.new
     @event = params[:commit]
@@ -119,7 +127,36 @@ class UsersController < ApplicationController
   end
 
   def myaccounts
+    @event = params[:commit]
+    if (@event == "Become a Seller")
+      redirect_to seller_reg_path
+    end
+  else
+    if (@event == "Sell Item")
+      redirect_to sellitem_path
+    end
+  end
 
+  def sellitem
+    @event = params[:commit]
+    if (@event == "Sell")
+      redirect_to itempage_path
+    end
+  else
+    if (@event == "Cancel")
+      redirect_to myaccounts_path
+    end
+  end
+
+  def bid
+    @event = params[:commit]
+    if (@event == "Submit Bid")
+      redirect_to itempage_path
+    end
+  else
+    if (@event == "Cancel")
+      redirect_to itempage_path
+    end
   end
 
 end

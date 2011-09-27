@@ -1,0 +1,11 @@
+<h1>Bidding Page</h1>
+
+<%= form_for('/bidding') do |f| %>
+    Bid Price:
+    <%= f.text_field :bidprice %>
+    <br/>
+    <div class="actions">
+      <%= f.submit "Submit Bid" %>
+      <%= f.submit "Cancel" %>
+    </div>
+<% end %>

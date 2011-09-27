@@ -12,6 +12,8 @@ BestBay::Application.routes.draw do
   match '/seller_reg', :to => 'users#seller_reg'
   match '/search', :to => 'users#search'
   match '/itempage', :to => 'users#itempage'
+  match '/bidding', :to => 'users#bid'
+  match '/sellitem', :to => 'users#sellitem'
 
 
   root :to => 'users#index'

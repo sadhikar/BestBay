@@ -1,3 +1,12 @@
 <h1>My Accounts</h1>
-
+<%= form_for('/myaccounts') do |f| %>
+    <!--Bid Price:-->
+    <!--<%= f.text_field :bidprice %>-->
+    <!--<br/>-->
+    <div class="actions">
+      <%= f.submit "Become a Seller" %>
+      <br/>
+       <%= f.submit "Sell Item" %>
+    </div>
+<% end %>
 

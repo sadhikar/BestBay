@@ -1,1 +1,9 @@
 <h1> Item Details</h1>
+<%= form_for('/itempage') do |f| %>
+
+    <div class="actions">
+      <%= f.submit "Bid" %>
+      <br/><br/>
+      <%= link_to "Back to Search Results",search_path %>
+    </div>
+<% end %>
